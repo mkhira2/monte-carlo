@@ -10,7 +10,7 @@ As my father in law once said "The less you bet, the more you can't win." Python
 ```
 git clone https://github.com/mkhira2/monte-carlo.git
 cd monte-carlo
-python3 monte-carlo.git
+python3 monte-carlo.py
 
 Roll out
 ```
