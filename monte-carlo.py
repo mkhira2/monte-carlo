@@ -3,7 +3,7 @@ import random
 # the die can take values from 1 to 100. If the number is between 1 and 51, the house wins. 
 # if the number is between 52 and 100, the player wins.
 
-def rolldice():
+def roll_dice():
     
     dice = random.randint(1,100)
     
@@ -21,7 +21,7 @@ def play(total_funds, wager_amount, total_plays):
 
     while play <= total_plays:
         # if we win
-        if rolldice():
+        if roll_dice():
             total_funds = total_funds + wager_amount
             play_num.append(play)
             funds.append(total_funds)
@@ -33,12 +33,12 @@ def play(total_funds, wager_amount, total_plays):
             
         play = play + 1
         
-    final_funds.append(Funds[-1])
+    final_funds.append(funds[-1])
     return(final_funds)
 
 final_funds= []
 
-def makeBets(total_plays):
+def make_bets(total_plays):
     x=1
     final_funds= []
 
@@ -50,11 +50,11 @@ def makeBets(total_plays):
 
 print("\nThe player starts the game with $10,000 and...\n")
 
-makeBets(5)
-makeBets(10)
-makeBets(50)
-makeBets(100)
-makeBets(500)
-makeBets(1000)
-makeBets(10000)
+make_bets(5)
+make_bets(10)
+make_bets(50)
+make_bets(100)
+make_bets(500)
+make_bets(1000)
+make_bets(10000)
 print()
