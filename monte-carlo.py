@@ -14,8 +14,8 @@ def rolldice():
 
 def play(total_funds, wager_amount, total_plays):
     
-    Play_num = []
-    Funds = []
+    play_num = []
+    funds = []
 
     play = 1
 
@@ -23,24 +23,24 @@ def play(total_funds, wager_amount, total_plays):
         # if we win
         if rolldice():
             total_funds = total_funds + wager_amount
-            Play_num.append(play)
-            Funds.append(total_funds)
+            play_num.append(play)
+            funds.append(total_funds)
         # if the house wins
         else:
             total_funds = total_funds - wager_amount 
-            Play_num.append(play)
-            Funds.append(total_funds)
+            play_num.append(play)
+            funds.append(total_funds)
             
         play = play + 1
         
-    Final_funds.append(Funds[-1])
-    return(Final_funds)
+    final_funds.append(Funds[-1])
+    return(final_funds)
 
-Final_funds= []
+final_funds= []
 
 def makeBets(total_plays):
     x=1
-    Final_funds= []
+    final_funds= []
 
     while x<=100:
         ending_fund = play(10000,100,total_plays)
